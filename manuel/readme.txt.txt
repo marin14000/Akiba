@@ -1,0 +1,1 @@
+contiendra les fichier latex et pdf concernant la notice d'utilisation du jeu

@@ -1,0 +1,719 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to Akiba’s documentation! &#8212; Akiba 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-akiba-s-documentation">
+<h1>Welcome to Akiba&#8217;s documentation!<a class="headerlink" href="#welcome-to-akiba-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-akiba"></span><dl class="function">
+<dt id="akiba.Coup_Possible">
+<code class="descclassname">akiba.</code><code class="descname">Coup_Possible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/akiba.html#Coup_Possible"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#akiba.Coup_Possible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cette fonction fait est appeler pour que l&#8217;IA puisse jouer,elle calcule tout les coups possible puis en tire
+un au hasard.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="akiba.beginIa">
+<code class="descclassname">akiba.</code><code class="descname">beginIa</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/akiba.html#beginIa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#akiba.beginIa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cette fonction permet de débuter une partie en jouant seul avec une &#8220;IA&#8221;.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="akiba.get_pos">
+<code class="descclassname">akiba.</code><code class="descname">get_pos</code><span class="sig-paren">(</span><em>event</em>, <em>ia</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/akiba.html#get_pos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#akiba.get_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction appelé lors d&#8217;un clique gauche il récupere la position du premier clique gauche puis si les valeurs du premier clic gauches sont définis,définit les valeurs du deuxiéme clic gauche,lorqu&#8217;il 
+definit les valeurs get_pos les transforme en coordonnées dans le tableaux(càd il que pos contient des entiers compris entre 0 et 6) ensuite il fait appele à la fonction traitement_coordone().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>event</strong> (<em>Tkinter Object.</em>) &#8211; class tkinter permettant de recuperer les &#8220;event&#8221; par exemple les coordonées x,y d&#8217;un clic gauche.</li>
+<li><strong>ia</strong> (<em>Booléen.</em>) &#8211; Permet de savoir si il y&#8217;a deux joueur ou un joueur et l&#8217;ia.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="akiba.jouerDeux">
+<code class="descclassname">akiba.</code><code class="descname">jouerDeux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/akiba.html#jouerDeux"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#akiba.jouerDeux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cette fonction permet de débuter une partie d&#8217;akiba à deux joueur.Elle change alors l&#8217;affichage sur le coté du plateau de jeu pour permettre d&#8217;afficher les scores,les noms des joueur et leur pion.
+De plus elle initialise l&#8217;évènement clique gauche.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="akiba.recommencer">
+<code class="descclassname">akiba.</code><code class="descname">recommencer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/akiba.html#recommencer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#akiba.recommencer" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permettant de recommencer une partie à 0.</p>
+</dd></dl>
+
+<span class="target" id="module-Point"></span><dl class="function">
+<dt id="Point.test_Pions_Pousser">
+<code class="descclassname">Point.</code><code class="descname">test_Pions_Pousser</code><span class="sig-paren">(</span><em>liste</em>, <em>x</em>, <em>y</em>, <em>point</em>, <em>coul</em>, <em>fct</em>, <em>Nom_Joueur</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Point.html#test_Pions_Pousser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Point.test_Pions_Pousser" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction pour tester est comptabiliser le nombre de pions adverse ou rouge pousser en dehors du plateau de
+jeu.Il modifie aussi l&#8217;affichage pour montrer le score au joueur.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; contient la les element constituer selon le mouvement réalise (si l&#8217;on travaile sur les x ou les y) des element y des sous-liste de plateau ou bien d&#8217;une sous-liste de plateau.</li>
+<li><strong>x</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée x dans la grille.</li>
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée y dans la grille.</li>
+<li><strong>point</strong> (<em>dictionnaire.</em>) &#8211; regroupe les score des joueur.</li>
+<li><strong>coul</strong> (<em>chaine de caractére.</em>) &#8211; permet d&#8217;indiquer la couleur de la boule qui doit jouer.</li>
+<li><strong>fct</strong> (<em>chaine de caractére.</em>) &#8211; permet d&#8217;indiquer la direction dans la quelle le joueur veut aller.</li>
+<li><strong>Nom_Joueur</strong> (<em>liste</em>) &#8211; Variable contenant les noms des joueurs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">les score des joueur.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dictionnaire</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Point.test_fin_partie">
+<code class="descclassname">Point.</code><code class="descname">test_fin_partie</code><span class="sig-paren">(</span><em>point</em>, <em>Nom_Joueur</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Point.html#test_fin_partie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#Point.test_fin_partie" title="Permalink to this definition">¶</a></dt>
+<dd><p>test fin partie est la fonction qui test si la partie est finie ou non.
+lorsque la partie est finie la fonction affiche un message via les fonction de messagebox et enléve le gestionnaire d&#8217;évènement
+du clic gauche.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>dictionnaire .</em>) &#8211; variable globale qui contient le nombre de boules rouges et adverse de chaque joueur.</li>
+<li><strong>Nom_Joueur</strong> (<em>liste.</em>) &#8211; Variables contenant les noms des joueurs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">une variables contenant deux booléen permetant de dire si le joueur 1 ou 2 à gagné.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tuples.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-utilitaire"></span><dl class="function">
+<dt id="utilitaire.About">
+<code class="descclassname">utilitaire.</code><code class="descname">About</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#About"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.About" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction affichant des information sur le programme.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.CreaPlateau">
+<code class="descclassname">utilitaire.</code><code class="descname">CreaPlateau</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#CreaPlateau"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.CreaPlateau" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction créant une grille de 7 liste de 7 éléments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">la grille contenant 7 liste qui contiennent des 0.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">liste.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.Grille_Initialle">
+<code class="descclassname">utilitaire.</code><code class="descname">Grille_Initialle</code><span class="sig-paren">(</span><em>plateau</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#Grille_Initialle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.Grille_Initialle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction initialisant la grille (qui represente le plateau) de départ 
+avec &#8216;N&#8217; pour figurer les boules noir, &#8216;B&#8217; pour figurer les boules blanche,
+&#8216;R&#8217; pour figurer les boules rouges et &#8216;V&#8217; pour figurer les emplacements vides.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>plateau</strong> (<em>liste.</em>) &#8211; liste de 7 liste qui contienent 7 element.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">La liste 2D representant la  grille / le plateau de départ du jeu d&#8217;akiba.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">liste.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.contraire_Couleur">
+<code class="descclassname">utilitaire.</code><code class="descname">contraire_Couleur</code><span class="sig-paren">(</span><em>coul</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#contraire_Couleur"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.contraire_Couleur" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>fonction qui permet de passer la couleur du pion qui joue à la couleur du pion 
+adverse. Par exemple si coul==&#8217;N&#8217; coul vaudra aprés la fonction &#8216;B&#8217;.De plus elle 
+change la couleur du pion qui indique qui doit jouer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">param coul:</th><td class="field-body">contient la couleur du pion qui doit jouer.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">type coul:</th><td class="field-body">chaine de caractére.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">La couleur contraire à celle donnée en paramétre</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">chaine de caractére</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.copie">
+<code class="descclassname">utilitaire.</code><code class="descname">copie</code><span class="sig-paren">(</span><em>y</em>, <em>plateau</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#copie"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.copie" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction qui copie le terme en position y de chaque liste contenue 
+dans la variable plateau.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; position du terme que l&#8217;on veut récuperer.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste representant la grille / le plateau du jeu d’akiba.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">la liste des termes en position y des sous-liste de la liste plateau.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.crea_grille_fenetre">
+<code class="descclassname">utilitaire.</code><code class="descname">crea_grille_fenetre</code><span class="sig-paren">(</span><em>canvas</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#crea_grille_fenetre"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.crea_grille_fenetre" title="Permalink to this definition">¶</a></dt>
+<dd><p>crea_grille_fenetre créé grace au canvas de tkinter une grille permetant
+d&#8217;afficher à l&#8217;ecran les pions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>canvas</strong> (<em>Tkinter Object.</em>) &#8211; Variable contenant l&#8217;addresse de l&#8217;objet canvas.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.pos_pion">
+<code class="descclassname">utilitaire.</code><code class="descname">pos_pion</code><span class="sig-paren">(</span><em>plateau</em>, <em>canvas</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#pos_pion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.pos_pion" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction qui créer les pions (objets oval tkinter) qui grace au plateau indique la couleur et la position
+du pions à tracer.De plus via la fonction crea_grille_fenetre() on affiche la grille dans la fenetre.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; Représente la grille via une liste de liste.</li>
+<li><strong>canvas</strong> &#8211; <p>Variable contenant l&#8217;addresse de l&#8217;objet canvas.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">type canvas:</th><td class="field-body">Tkinter Object.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="utilitaire.quitter">
+<code class="descclassname">utilitaire.</code><code class="descname">quitter</code><span class="sig-paren">(</span><em>fen</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utilitaire.html#quitter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utilitaire.quitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permettant de quitter complétemment les jeu.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fen</strong> (<em>Tkinter Object.</em>) &#8211; Fenetre principale tkinter.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-IA"></span><dl class="function">
+<dt id="IA.playIa">
+<code class="descclassname">IA.</code><code class="descname">playIa</code><span class="sig-paren">(</span><em>liste_coup_possible</em>, <em>plateau</em>, <em>point</em>, <em>coul</em>, <em>antecedent</em>, <em>Nom_Joueur</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/IA.html#playIa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#IA.playIa" title="Permalink to this definition">¶</a></dt>
+<dd><p>cette Fonction fait jouer l&#8217;IA,c&#8217;est à dire qu&#8217;il choisi au hasard un coup à jouée parmi tout les coups possible, et, grace à la fonction traitement_coordonne joue ce coup.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>liste_coup_possible</strong> (<em>liste.</em>) &#8211; Liste des coup possible de jouer pour l&#8217;IA.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; Liste 2D représentant la grill/plateau du jeu d&#8217;akiba</li>
+<li><strong>point</strong> (<em>dictionnaire.</em>) &#8211; Variable contenant les points/les boule de chaque joueur.</li>
+<li><strong>coul</strong> (<em>chaine de caractére.</em>) &#8211; Variable représentant la couleur du/de la pion/boules qui doit jouer.</li>
+<li><strong>antecedent</strong> (<em>dictionnaire.</em>) &#8211; contient la position, le mouvement ainsi que la liste du joueur qui à jouer juste avant.</li>
+<li><strong>Nom_Joueur</strong> (<em>liste.</em>) &#8211; Variable contenant le nom des joueur.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Variables contenant les variables citer plus haut changer.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tuples.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-test"></span><dl class="function">
+<dt id="test.anti_deplacement_contraire">
+<code class="descclassname">test.</code><code class="descname">anti_deplacement_contraire</code><span class="sig-paren">(</span><em>mode</em>, <em>x</em>, <em>y</em>, <em>liste</em>, <em>antecedent</em>, <em>fct</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/test.html#anti_deplacement_contraire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test.anti_deplacement_contraire" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction qui empeche un mouvement contraire au deplacement précedent.
+En effet grace à cette fonction si joueur 1 joue un coups en haut et deplace
+les pions de joueur 2,joueur 2 n&#8217;a pas le droit d&#8217;effectuer aussitot un mouvement
+contraire à celui de joueur 1 (ici un coup en bas dans les même case verticales).
+cette fonction possedent deux &#8220;modes&#8221;, w pour write ou on inscrits les mouvement
+ainsi que les position effectuer par le joueur, t pour test pour verifier si le
+joueur peut jouer le coup qu&#8217;il demande.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>mode</strong> (<em>chaine de caractére.</em>) &#8211; permet deux differencier le mode t du mode w.</li>
+<li><strong>x</strong> (<em>entier entre 0 et 6.</em>) &#8211; donne la position x du pions selon la grille.</li>
+<li><strong>y</strong> (<em>entier entre 0 et 6.</em>) &#8211; donne la position y du pions selon la grille.</li>
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; contient la les element constituer selon le mouvement réalise (si l&#8217;on travaile sur les x ou les y) des element y des sous-liste de plateau ou bien d&#8217;une sous-liste de plateau.</li>
+<li><strong>antecedent</strong> (<em>dictionnaire.</em>) &#8211; contient la position, le mouvement ainsi que la liste du joueur qui à jouer juste avant.</li>
+<li><strong>fct</strong> (<em>chaine de caractére</em>) &#8211; parametre d&#8217;identifier la direction dans laquele on veut deplacer ses boules</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Un booléen permetant de dire si oui ou non le mouvement est autorisée.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Booléen.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="test.compte_pions_coul">
+<code class="descclassname">test.</code><code class="descname">compte_pions_coul</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>fct</em>, <em>plateau</em>, <em>coul</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/test.html#compte_pions_coul"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test.compte_pions_coul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cette fonction regarde si le deplacement d&#8217;un pions n&#8217;entrenerait pas un de ses pions en dehors du plateau.
+Pour cela il parcours la grille est renvoie True si il trouve une case vide ou que la derniere boules n&#8217;est
+pas de sa couleurs sinon il renvoie False.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>Entier compris entre 0 et 6.</em>) &#8211; Position x du pion selon la grille.</li>
+<li><strong>y</strong> (<em>Entier compris entre 0 et 6.</em>) &#8211; Position y du pion selon la grille.</li>
+<li><strong>fct</strong> (<em>chaine de caractére.</em>) &#8211; Donne la fonction ou autrement dit le mouvement que l&#8217;on veut réaliser.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>coul</strong> (<em>chaine de carctére.</em>) &#8211; permet d&#8217;indiquer la couleur de la boule qui doit jouer.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Un booléen permetant de dire si oui ou non le mouvement est autorisée</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">booléen</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="test.test_deplacement">
+<code class="descclassname">test.</code><code class="descname">test_deplacement</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>plateau</em>, <em>coul</em>, <em>fct</em>, <em>ia</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/test.html#test_deplacement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#test.test_deplacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction qui regroupe les test fait par la fonction &#8220;compte_pions_coul&#8221; et qui rajoute d&#8217;autre régles pour
+verifier que le pions que l&#8217;on joue soit celui du joueur, ainsi qu&#8217;il puisse mettre son doit derriére sa pierre
+sans toucher d&#8217;autre pierre.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>Entier compris entre 0 et 6.</em>) &#8211; Position x du pion selon la grille.</li>
+<li><strong>y</strong> (<em>Entier compris entre 0 et 6.</em>) &#8211; Position y du pion selon la grille.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste representant la grille  le plateau du jeu d’akiba.</li>
+<li><strong>coul</strong> (<em>chaine de caractére.</em>) &#8211; permet d&#8217;indiquer la couleur de la boule qui doit jouer.</li>
+<li><strong>fct</strong> (<em>chaine de caractére.</em>) &#8211; permet d&#8217;indiquer la direction dans la quelle le joueur veut aller.</li>
+<li><strong>ia</strong> (<em>Booléen.</em>) &#8211; Permet de savoir si il y&#8217;a deux joueur ou un joueur et l&#8217;ia.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Un booléen permetant de dire si oui ou non le mouvement est autorisée</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Booléen</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-MVT"></span><dl class="function">
+<dt id="MVT.B">
+<code class="descclassname">MVT.</code><code class="descname">B</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>plateau</em>, <em>liste</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MVT.html#B"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MVT.B" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permetant de déplacer les pions dans la grille vers le bas.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée x dans la grille.</li>
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée y dans la grille.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste 2D representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; Une liste 1D representant l&#8217;axe des y.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">La liste 2D representant la grille / le plateau du jeu d’akiba.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="MVT.D">
+<code class="descclassname">MVT.</code><code class="descname">D</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>plateau</em>, <em>liste</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MVT.html#D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MVT.D" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permetant de déplacer les pions dans la grille vers la droite.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée x dans la grille.</li>
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée y dans la grille.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste 2D representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; Une liste 1D representant l&#8217;axe des x.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">La liste 2D representant la grille / le plateau du jeu d’akiba.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="MVT.G">
+<code class="descclassname">MVT.</code><code class="descname">G</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>plateau</em>, <em>liste</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MVT.html#G"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MVT.G" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permetant de déplacer les pions dans la grille vers la gauche.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée x dans la grille.</li>
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée y dans la grille.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste 2D representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; Une liste 1D representant l&#8217;axe des x.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">La liste 2D representant la grille / le plateau du jeu d’akiba.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="MVT.H">
+<code class="descclassname">MVT.</code><code class="descname">H</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>plateau</em>, <em>liste</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MVT.html#H"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MVT.H" title="Permalink to this definition">¶</a></dt>
+<dd><p>fonction permetant de déplacer les pions dans la grille vers le haut.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée x dans la grille.</li>
+<li><strong>y</strong> (<em>entier compris entre 0 et 6.</em>) &#8211; coordonnée y dans la grille.</li>
+<li><strong>plateau</strong> (<em>liste.</em>) &#8211; La liste 2D representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>liste</strong> (<em>liste.</em>) &#8211; Une liste 1D representant l&#8217;axe des y.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">La liste 2D representant la grille / le plateau du jeu d’akiba.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="MVT.traitement_coordonne">
+<code class="descclassname">MVT.</code><code class="descname">traitement_coordonne</code><span class="sig-paren">(</span><em>pos</em>, <em>coul</em>, <em>plateau</em>, <em>point</em>, <em>antecedent</em>, <em>ia</em>, <em>Nom_Joueur</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/MVT.html#traitement_coordonne"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#MVT.traitement_coordonne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction qui traite les coordonnées et donc définie si le joueur a voulue faire un mouvement vers le bas,le haut,la droite ou la gauche.Il fait dans le même temps appele 
+à la fonction coresspondant au mouvement.Enfin il re-initialise le dictionnaire pos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coul</strong> (<em>chaine de caractére</em>) &#8211; contient la couleur du pion qui doit jouer.</li>
+<li><strong>plateau</strong> (<em>liste</em>) &#8211; La liste 2D representant la grille / le plateau du jeu d’akiba.</li>
+<li><strong>point</strong> (<em>dictionnaire</em>) &#8211; regroupe les score des joueur.</li>
+<li><strong>antecedent</strong> (<em>dictionnaire</em>) &#8211; contient la position, le mouvement ainsi que la liste du joueur qui à jouer juste avant.</li>
+<li><strong>pos</strong> (<em>dictionnaire.</em>) &#8211; Variable globale qui contient les position de deux clic gauche.</li>
+<li><strong>ia</strong> (<em>Booléen.</em>) &#8211; Permet de savoir si il y&#8217;a deux joueur ou un joueur et l&#8217;ia.</li>
+<li><strong>Nom_Joueur</strong> (<em>liste.</em>) &#8211; Variables contenant le nom du ou des joueur(s).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">un tuples contenant les variables plateau,coul,antecedent,point pour les &#8220;remmetre&#8221; dans les variables globales.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tuples</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-score"></span><dl class="function">
+<dt id="score.Enregistrer">
+<code class="descclassname">score.</code><code class="descname">Enregistrer</code><span class="sig-paren">(</span><em>point</em>, <em>Nom_Joueur</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#Enregistrer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.Enregistrer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction qui enregistre si l&#8217;on à voulu a la fin de la partie le score des joueur.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>point</strong> (<em>dictionnaire.</em>) &#8211; Variable contenant le nombre de boules rouges ou adverse de chacun des joueur.</li>
+<li><strong>Nom_Joueur</strong> (<em>liste.</em>) &#8211; Variables contenant le nom du ou des joueur.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="score.LitFichier">
+<code class="descclassname">score.</code><code class="descname">LitFichier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#LitFichier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.LitFichier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction qui lit le fichier Score.txt ou est enregitsrer tout les scores que l&#8217;on à voulu enregistrer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Une variable contenant les ligne du fichier.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Liste</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="score.affiche_resultat">
+<code class="descclassname">score.</code><code class="descname">affiche_resultat</code><span class="sig-paren">(</span><em>Liste_Score</em>, <em>fen2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#affiche_resultat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.affiche_resultat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction permetant d&#8217;afficher les scores d&#8217;un joueur d&#8217;aprés le fichier Score.txt</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Liste_Score</strong> (<em>liste</em>) &#8211; Variable contenant les scores des parties auquel le joueur recherché à participé.</li>
+<li><strong>fen</strong> (<em>Tkinter Object.</em>) &#8211; Variables contenant l&#8217;addresse de la fenetre tkinter ouverte pour demander le nom du joueur.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="score.recherche_score">
+<code class="descclassname">score.</code><code class="descname">recherche_score</code><span class="sig-paren">(</span><em>ia</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#recherche_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.recherche_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction permettant d&#8217;afficher une fenetre pour demander le nom du joueur pour recercher ses score dans le fichier Scores.txt</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ia</strong> (<em>Booléen.</em>) &#8211; Variable définissant si le deuxiéme joueur peut être l&#8217;ia ou non.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="score.reinitialise_fichier_score">
+<code class="descclassname">score.</code><code class="descname">reinitialise_fichier_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#reinitialise_fichier_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.reinitialise_fichier_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction permettant d&#8217;effacer tout le contenu du fichier Score.txt, la ou se trouve les scores enregistrer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="score.search_by_name">
+<code class="descclassname">score.</code><code class="descname">search_by_name</code><span class="sig-paren">(</span><em>NomJoueur</em>, <em>ia</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/score.html#search_by_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#score.search_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fonction recherchant dans une liste le nom d&#8217;un joueur.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>NomJoueur</strong> (<em>chaine de caractére.</em>) &#8211; Variable contenant le nom du joueur à rechercher.</li>
+<li><strong>ia</strong> (<em>Booléen.</em>) &#8211; Variable définissant si le deuxiéme joueur peut être l&#8217;ia ou non.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Variable contenant les scores des joueur ou figurer le joueur rechercher.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">liste.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Akiba&#8217;s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Dorange Launey Marin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

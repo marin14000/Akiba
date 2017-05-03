@@ -1,0 +1,15 @@
+\select@language {french}
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction du jeu d'Akiba.}{3}{section.1}
+\contentsline {section}{\numberline {2}Les r\IeC {\'e}gles du jeu.}{3}{section.2}
+\contentsline {section}{\numberline {3}Comment jouer sur notre jeu ?}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Jouer \IeC {\`a} deux.}{5}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}D\IeC {\'e}but de la partie.}{6}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Une fois la partie lanc\IeC {\'e}e}{6}{subsubsection.3.1.2}
+\contentsline {subsection}{\numberline {3.2}Jouer Seul contre l'IA.}{6}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}D\IeC {\'e}but de la partie.}{7}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Une fois la partie lanc\IeC {\'e}e}{7}{subsubsection.3.2.2}
+\contentsline {section}{\numberline {4}Fin d'une partie.}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Enregistrer une partie.}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Revoir ses ancient scores}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Effacer les scores.}{8}{subsection.4.3}

@@ -1,0 +1,29 @@
+\select@language {french}
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Aspect esth\IeC {\'e}tique}{3}{section.2}
+\contentsline {section}{\numberline {3}Aspect technique}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Fonctionalit\IeC {\'e} de base}{3}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}initialisation d'une partie en ligne de commande}{3}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}les mouvements}{4}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}les test des mouvements}{6}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}la gestion des points}{6}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Fonctionalit\IeC {\'e} rajouter}{7}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Une interface graphique}{7}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Une IA}{7}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Un enregistrement,affichage des scores r\IeC {\'e}alis\IeC {\'e}.}{8}{subsubsection.3.2.3}
+\contentsline {section}{\numberline {4}Suite voulue}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Une IA plus inteligente}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Une meilleur gestion des clic de la souris}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Des bruitages et/ou animation}{9}{subsection.4.3}
+\contentsline {section}{\numberline {5}Erreur et test de fonction repr\IeC {\'e}sentative du programme.}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}anti\_deplacement\_contraire}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}B}{9}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}test\_fin\_partie}{9}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}test\_Pions\_pousser}{9}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}traitement\_coordone}{9}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}test\_deplacement}{9}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}compte\_pions\_coul}{10}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}search\_by\_name}{10}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Grille\_Initiale}{10}{subsection.5.9}
+\contentsline {section}{\numberline {6}conclusion}{10}{section.6}

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>score &#8212; Akiba 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for score</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">tkinter</span> <span class="k">import</span> <span class="n">Label</span><span class="p">,</span><span class="n">Toplevel</span><span class="p">,</span><span class="n">Button</span><span class="p">,</span><span class="n">Entry</span>
+<div class="viewcode-block" id="Enregistrer"><a class="viewcode-back" href="../index.html#score.Enregistrer">[docs]</a><span class="k">def</span> <span class="nf">Enregistrer</span><span class="p">(</span><span class="n">point</span><span class="p">,</span><span class="n">Nom_Joueur</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction qui enregistre si l&#39;on à voulu a la fin de la partie le score des joueur.</span>
+
+<span class="sd">        :param point: Variable contenant le nombre de boules rouges ou adverse de chacun des joueur.</span>
+
+<span class="sd">        :param Nom_Joueur: Variables contenant le nom du ou des joueur.</span>
+
+<span class="sd">        :type point: dictionnaire.</span>
+
+<span class="sd">        :type Nom_Joueur: liste.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Fichier</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Score.txt&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    <span class="n">Fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;R&#39;</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="n">Fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;R&#39;</span><span class="p">])</span><span class="o">+</span><span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="n">Nom_Joueur</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+    <span class="n">Fichier</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">Fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+    
+<div class="viewcode-block" id="LitFichier"><a class="viewcode-back" href="../index.html#score.LitFichier">[docs]</a><span class="k">def</span> <span class="nf">LitFichier</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction qui lit le fichier Score.txt ou est enregitsrer tout les scores que l&#39;on à voulu enregistrer.</span>
+
+<span class="sd">        :return: Une variable contenant les ligne du fichier.</span>
+
+<span class="sd">        :rtype: Liste</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Fichier</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Score.txt&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+        <span class="n">Ligne</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Fichier</span><span class="p">:</span>
+            <span class="n">Ligne</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">))</span>
+        <span class="n">Fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">Ligne</span>
+    <span class="k">except</span><span class="p">:</span><span class="k">return</span> <span class="p">[]</span></div>
+<div class="viewcode-block" id="search_by_name"><a class="viewcode-back" href="../index.html#score.search_by_name">[docs]</a><span class="k">def</span> <span class="nf">search_by_name</span><span class="p">(</span><span class="n">NomJoueur</span><span class="p">,</span><span class="n">ia</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction recherchant dans une liste le nom d&#39;un joueur.</span>
+
+<span class="sd">        :param NomJoueur: Variable contenant le nom du joueur à rechercher.</span>
+
+<span class="sd">        :param ia: Variable définissant si le deuxiéme joueur peut être l&#39;ia ou non.</span>
+
+<span class="sd">        :type NomJoueur: chaine de caractére.</span>
+
+<span class="sd">        :type ia: Booléen.</span>
+
+<span class="sd">        :return: Variable contenant les scores des joueur ou figurer le joueur rechercher.</span>
+
+<span class="sd">        :rtype: liste.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">ia</span><span class="p">:</span>
+        <span class="n">ListeLigne</span><span class="o">=</span><span class="n">LitFichier</span><span class="p">()</span>
+        <span class="n">ListePointJoueur</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ListeLigne</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">NomJoueur</span> <span class="ow">or</span> <span class="n">i</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="n">NomJoueur</span><span class="p">:</span>
+                <span class="n">ListePointJoueur</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">ListeLigne</span><span class="o">=</span><span class="n">LitFichier</span><span class="p">()</span>
+        <span class="n">ListePointJoueur</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ListeLigne</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">NomJoueur</span> <span class="ow">and</span> <span class="n">i</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">!=</span><span class="s1">&#39;IA&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">i</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">==</span><span class="n">NomJoueur</span><span class="p">:</span>
+                <span class="n">ListePointJoueur</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ListePointJoueur</span></div>
+<div class="viewcode-block" id="recherche_score"><a class="viewcode-back" href="../index.html#score.recherche_score">[docs]</a><span class="k">def</span> <span class="nf">recherche_score</span><span class="p">(</span><span class="n">ia</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction permettant d&#39;afficher une fenetre pour demander le nom du joueur pour recercher ses score dans le fichier Scores.txt</span>
+
+<span class="sd">        :param ia: Variable définissant si le deuxiéme joueur peut être l&#39;ia ou non.</span>
+
+<span class="sd">        :type ia: Booléen.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fen2</span><span class="o">=</span><span class="n">Toplevel</span><span class="p">()</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Entrez le nom du joueur à rechercher&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">Nom</span><span class="o">=</span><span class="n">Entry</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic&quot;</span><span class="p">))</span>
+    <span class="n">Nom</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">Boutton</span><span class="o">=</span><span class="n">Button</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;validez&#39;</span><span class="p">,</span><span class="n">command</span><span class="o">=</span><span class="k">lambda</span> <span class="p">:</span><span class="n">affiche_resultat</span><span class="p">(</span><span class="n">search_by_name</span><span class="p">(</span><span class="n">Nom</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span><span class="n">ia</span><span class="p">),</span><span class="n">fen2</span><span class="p">),</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;bold italic&quot;</span><span class="p">))</span>
+    <span class="n">Boutton</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span></div>
+<div class="viewcode-block" id="affiche_resultat"><a class="viewcode-back" href="../index.html#score.affiche_resultat">[docs]</a><span class="k">def</span> <span class="nf">affiche_resultat</span><span class="p">(</span><span class="n">Liste_Score</span><span class="p">,</span><span class="n">fen2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction permetant d&#39;afficher les scores d&#39;un joueur d&#39;aprés le fichier Score.txt</span>
+
+<span class="sd">        :param Liste_Score: Variable contenant les scores des parties auquel le joueur recherché à participé.</span>
+
+<span class="sd">        :param fen: Variables contenant l&#39;addresse de la fenetre tkinter ouverte pour demander le nom du joueur.</span>
+
+<span class="sd">        :type Liste_Score: liste</span>
+
+<span class="sd">        :type fen: Tkinter Object.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fen2</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+    <span class="n">fen2</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+    <span class="n">fen2</span><span class="o">=</span><span class="n">Toplevel</span><span class="p">()</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nom J1&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nombre de boules rouges&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nombre de boules adverse&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nom J2&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nombre de boules rouges&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Nombre de boules adverse&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;bold italic underline&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">padx</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">=</span><span class="mi">1</span>
+    <span class="n">column</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Liste_Score</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">Label</span><span class="p">(</span><span class="n">fen2</span><span class="p">,</span><span class="n">text</span><span class="o">=</span><span class="n">j</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Comic sans ms&#39;</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="n">row</span><span class="p">,</span><span class="n">column</span><span class="o">=</span><span class="n">column</span><span class="p">)</span>
+            <span class="n">column</span><span class="o">+=</span><span class="mi">1</span> 
+        <span class="n">column</span><span class="o">=</span><span class="mi">0</span>
+        <span class="n">row</span><span class="o">+=</span><span class="mi">1</span></div>
+        
+<div class="viewcode-block" id="reinitialise_fichier_score"><a class="viewcode-back" href="../index.html#score.reinitialise_fichier_score">[docs]</a><span class="k">def</span> <span class="nf">reinitialise_fichier_score</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fonction permettant d&#39;effacer tout le contenu du fichier Score.txt, la ou se trouve les scores enregistrer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Fichier</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;score.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">Fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+	<span class="kn">from</span> <span class="nn">akiba</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Dorange Launey Marin.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
